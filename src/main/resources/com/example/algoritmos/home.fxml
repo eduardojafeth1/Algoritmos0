@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
+<BorderPane prefHeight="504.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.algoritmos.homeController">
+   <top>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <MenuBar>
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <MenuButton mnemonicParsing="false" popupSide="TOP" text="MenuButton">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </MenuButton>
-         </children>
-      </HBox>
-   </children>
-</VBox>
+   </top>
+    <center>
+        <VBox fx:id="vBox1" prefHeight="568.0" prefWidth="413.0">
+            <Label>Filtrar Por:</Label>
+            <HBox>
+                <VBox>
+                    <Label>Categoria</Label>
+               <ChoiceBox fx:id="categoriafilter" prefWidth="150.0" />
+               <Button mnemonicParsing="false" onAction="#filter" text="filtrar" />
+
+                </VBox>
+                <VBox prefHeight="100.0" prefWidth="200.0">
+                <children>
+                   <Label text="Desde:" />
+                   <DatePicker fx:id="desde" />
+                   <Label text="Hasta:" />
+                   <DatePicker fx:id="hasta" />
+               </children>
+            </VBox>
+
+            </HBox>
+
+            <Accordion>
+
+            </Accordion>
+         <ListView prefHeight="200.0" prefWidth="200.0" />
+        </VBox>
+   </center>
+    <left><VBox prefHeight="533.0" prefWidth="133.0">
+        <children>
+            <Button mnemonicParsing="false" onAction="#charge" text="Cargar" />
+            <Button mnemonicParsing="false" text="Editar" />
+            <Button mnemonicParsing="false" text="Borrar" />
+            <Button mnemonicParsing="false" onAction="#anadir" text="añadir" />
+            <Button mnemonicParsing="false" text="credits" />
+            <Button mnemonicParsing="false" text="Generar reporte" />
+        </children></VBox></left>
+</BorderPane>

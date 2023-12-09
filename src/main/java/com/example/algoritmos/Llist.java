@@ -1,9 +1,10 @@
 package com.example.algoritmos;
 
+import java.io.Serializable;
 import java.util.NoSuchElementException;
 
 // Linked list implementation
-class Llist<E> implements list<E> {
+class Llist<E> implements list<E> , Serializable{
     private Link<E> head;      // Pointer to list header
     private Link<E> tail;      // Pointer to last element
     private Link<E> curr;      // Access to current element

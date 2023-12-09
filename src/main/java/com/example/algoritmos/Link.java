@@ -1,6 +1,8 @@
 package com.example.algoritmos;
 
-class Link<E> {         // Singly linked list node class
+import java.io.Serializable;
+
+class Link<E> implements Serializable {         // Singly linked list node class
     private E e;          // Value for this node
     private Link<E> n;    // Point to next node in list
 

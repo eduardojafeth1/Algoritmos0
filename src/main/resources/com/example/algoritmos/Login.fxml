@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="25.0" style="-fx-alignment: Center" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.algoritmos.ViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="25.0" style="-fx-alignment: Center" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.algoritmos.LoginController">
    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@descarga.png" />
@@ -16,5 +12,8 @@
    <TextField fx:id="user" maxHeight="-Infinity" maxWidth="-Infinity" prefColumnCount="10" promptText="User" VBox.vgrow="NEVER" />
    <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefColumnCount="10" prefHeight="25.6" prefWidth="127.0" promptText="password" VBox.vgrow="NEVER" />
    <Button fx:id="b" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#Login" prefHeight="26.0" prefWidth="85.0" snapToPixel="false" style="-fx-alignment: CENTER;" text="Log in" />
-   <HBox prefHeight="100.0" prefWidth="200.0" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Hyperlink onAction="#singUp" text="Registrase" />
+      </children></HBox>
 </VBox>
